@@ -31,8 +31,8 @@ return item.insertMany({category:category,title:title,description:description,pr
 
 
 
-const update=(id,title)=>{
- return item.findByIdAndUpdate(id, { title:title })
+const update=(id,title,price,cover )=>{
+ return item.findByIdAndUpdate(id, { title:title,price:price,cover:cover })
 }
 
 const destroy=(id)=>{

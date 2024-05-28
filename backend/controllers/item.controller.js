@@ -32,7 +32,7 @@
 
     const change= async function (req,res) {
       try{
-        const y=await item.update(req.params.id,req.body.title)
+        const y=await item.update(req.params.id,req.body.title,req.body.price,req.body.cover)
         res.status(204).json(y)
       } catch(err) {res.status(505).send(err)}
     };
