@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+};
+
+* {
+box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  background-color: #f1cdcd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 1rem;
+  text-align: center;
+  display: flex;
+}
+
+.nav {
+  background-color: #333;
+  color:white;
+  display: flex;
+justify-content: space-between;
+align-items: stretch;
+gap:2rem;
+padding:0 1rem;
+}
+
+
+.site-name {
+  font-size:2rem ;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.nav li:hover {
+  background-color: #777;
+  
+  }
+.nav li #active {
+background-color: #555;
+
+}
+
+.books{
+  display: flex;
+  flex-direction:row;
+  gap: 40px;
+  display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: (5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.book{
+  flex:1.2;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+img{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  
+}
+
+.delete{
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+}
+.update{
+  border: none;
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form {
+  display:inline-flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.formbutton{
+  border: none;
+  padding: 10px;
+  background-color: rgb(235, 73, 73);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
