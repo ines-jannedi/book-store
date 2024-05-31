@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
-const Edit=()=>{
+const Post=()=>{
     const [books,setBooks]=useState([])
     const [category,setcategory]=useState("")
     const [title,settitle]=useState("")
     const [cover,setcover]=useState("")
     const [description,setdescription]=useState("")
-    const [price,setprice]=useState(null)
+    const [price,setprice]=useState("")
     
 const navigate=useNavigate()
+
+
    const handlePost=()=>{
     axios.post("http://localhost:5000/books/create",{category,title,cover,description,price}).then((res)=>{
   setBooks(res.data)
@@ -27,7 +29,7 @@ const navigate=useNavigate()
             <input type="text" placeholder="title" onChange={(e)=>settitle(e.target.value)} defaultValue={title} />
             <input type="text" placeholder="cover" onChange={(e)=>setcover(e.target.value)} defaultValue={cover} />
             <input type="text" placeholder="description" onChange={(e)=>setdescription(e.target.value)} defaultValue={description}/>
-            <input type="number" placeholder="price" onChange={(e)=>setprice(e.target.value)}  defaultValue={price}/>
+            <input type="text" placeholder="price" onChange={(e)=>setprice(e.target.value)}  defaultValue={price}/>
 
 <button  className="formbutton" onClick={handlePost}>➕</button>
         </div>
@@ -36,4 +38,4 @@ const navigate=useNavigate()
 }
 
 
-export default Edit;
+export default Post;

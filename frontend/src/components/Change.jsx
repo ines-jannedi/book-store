@@ -8,18 +8,18 @@ const Find=()=>{
     const [category,setcategory]=useState("")
     const [title,settitle]=useState("")
     const [cover,setcover]=useState("")
-    const [description,setdescription]=useState("")
-    const [price,setprice]=useState(null)
+    
+    const [price,setprice]=useState("")
     
 const navigate=useNavigate()
 
 
 
    const handlePut=(id)=>{
-    axios.put(`http://localhost:5000/books/upd/${id}`,{category,title,cover,description,price}).then((res)=>{
+    axios.put(`http://localhost:5000/books/upd/${id}`,{category,title,cover,price}).then((res)=>{
   setBooks(books.map((e)=>{
     if(e._id===id){
-       return {...e,category,title,cover,description,price}
+       return {...e,category,title,cover,price}
      } else {return e
 
         }
@@ -38,7 +38,7 @@ const navigate=useNavigate()
             
             <input type="text" placeholder="title" onChange={(e)=>settitle(e.target.value)} defaultValue={title} />
             <input type="text" placeholder="cover" onChange={(e)=>setcover(e.target.value)} defaultValue={cover} />
-            <input type="number" placeholder="price" onChange={(e)=>setprice(e.target.value)}  defaultValue={price}/>
+            <input type="text" placeholder="price" onChange={(e)=>setprice(e.target.value)}  defaultValue={price}/>
 
 <button className="formbutton" onClick={()=>{handlePut(_id)}}>update</button>
         </div>

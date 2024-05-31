@@ -1,25 +1,29 @@
-import React,{ useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from "./navbar";
 import Book from './components/Book.jsx';
 import Update from './components/Change.jsx';
-import Add from './components/Edit.jsx';
-import Search from './components/Find.jsx';
+import Add from './components/Post.jsx';
+import Onebook from './components/Onebook.jsx';
 import {Route,Routes} from "react-router-dom"
 
 
 
 function App() {
+  const [query,setquery]=useState({})
  
   return (
     <div className='App'>
     <Navbar/>
   <div className='container'>
 <Routes>
-<Route path='/' element={<Book/>}/>
+<Route path='/' element={<Book setquery={setquery}/>}/>
 <Route path='/update' element={<Update/>}/>
 <Route path='/add' element={<Add/>}/>
-<Route path='/search' element={<Search/>}/>
+<Route path='/onebook' element={<Onebook query={query}/>}/>
+
+
+
 
 
 </Routes>

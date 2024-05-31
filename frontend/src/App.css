@@ -1,6 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 .App {
   text-align: center;
-
+  width: 85%;
+  margin: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,15 +24,20 @@
 };
 
 * {
-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
 }
 
 body {
   margin:0;
-  background-color: #f1cdcd;
+  background-color:rgb(232, 227, 227);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: Outfit;
+
 }
 
 .container {
@@ -39,9 +47,9 @@ body {
 }
 
 .nav {
-  background-color: #333;
+  background-color: #3e5962;
   color:white;
-  display: flex;
+  display:flex;
 justify-content: space-between;
 align-items: stretch;
 gap:2rem;
@@ -78,14 +86,11 @@ background-color: #555;
 }
 
 .books{
-  display: flex;
-  flex-direction:row;
-  gap: 40px;
   display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: (5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 30px;
+  gap: 30px;
+  row-gap: 50px;
 }
 
 .book{
@@ -102,16 +107,12 @@ img{
   
 }
 
-.delete{
+
+.update,.delete{
+  
   border: none;
   padding: 3px 6px;
-  background-color: white;
-  cursor: pointer;
-}
-.update{
-  border: none;
-  padding: 3px 6px;
-  background-color: white;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -121,17 +122,23 @@ img{
   gap: 30px;
 }
 
-input {
-  width: 250px;
-  padding: 10px;
-  border: 1px solid gray;
+
+
+
+button , input{
+  background: transparent;
+  font-size: 16px;
+  color: #49557e;
+  border: 1px solid rgb(233, 79, 120);
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transform: 0.3s;
 }
 
-.formbutton{
-  border: none;
-  padding: 10px;
-  background-color: rgb(235, 73, 73);
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+.book-box{
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px #00000015;
 }
