@@ -12,7 +12,7 @@
 
      const selectOne = async function (req, res) {
       try {
-        const y = await item.getOne(req.params.title);
+        const y = await item.getOne(req.params.title );
         res.status(200).json(y[0]);
       } catch (error) {
         res.status(404).send(error);

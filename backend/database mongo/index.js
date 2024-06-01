@@ -26,7 +26,7 @@ const getOne=(title)=>{
 }
 
 const create=(category,title,description,price,cover)=>{
-return item.insertMany({category:category,title:title,description:description,price:price,cover:cover})
+return item.create({category:category,title:title,description:description,price:price,cover:cover})
 }
 
 

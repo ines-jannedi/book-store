@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-
+import Footer from './Footerr.jsx'
 
 const Book = (props) => {
     const [books, setBooks] = useState([])
@@ -44,6 +44,7 @@ const Book = (props) => {
     return (
 
         <div>
+            
             <input className="form" type="text" placeholder="ur book" onChange={(e) => setsearch(e.target.value)} />
             <button  onClick={() => handelSearch(search)}>search</button>
 
@@ -71,7 +72,13 @@ const Book = (props) => {
             </div>
 
             <button className="formbutton"><Link to="/add">Add new book</Link>
-            </button>
+            </button> <br/>
+
+
+            
+            <>
+            <Footer/>
+           </>
         </div>
     )
 
