@@ -25,15 +25,12 @@ function App() {
 <Route path='/update' element={<Update/>}/>
 <Route path='/add' element={<Add/>}/>
 <Route path='/onebook' element={<Onebook query={query}/>}/>
-<Route path='/footer' element={<Footer/>}/>
 <Route path='/about' element={<About/>}/>
 <Route path='/privace' element={<Privace/>}/>
 
-
-
 </Routes>
     </div>
-
+    <Footer/>
  </div>
   )
 }

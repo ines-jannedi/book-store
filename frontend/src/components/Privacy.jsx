@@ -62,7 +62,7 @@ const Privacy = () => {
                 </div>
 
             </div>
-            <Footer />
+            
 
         </div>
     )
