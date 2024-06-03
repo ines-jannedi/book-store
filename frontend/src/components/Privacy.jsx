@@ -1,7 +1,5 @@
 import React from "react";
-import Footer from "./Footerr.jsx"
-import Navbar from "../navbar.js";
-import { Link } from "react-router-dom";
+
 
 
 const Privacy = () => {

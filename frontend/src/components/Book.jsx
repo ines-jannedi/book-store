@@ -14,7 +14,7 @@ const Book = (props) => {
     useEffect(() => {
         axios.get("http://localhost:5000/books/getAll").then((result) => {
             setBooks(result.data)
-
+ console.log(result);
         }).catch((err) => console.log(err))
     }, [])
 

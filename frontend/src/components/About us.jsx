@@ -1,6 +1,5 @@
 import React from "react";
-import Footer from "./Footerr.jsx"
-import Navbar from "../navbar.js";
+
 
 
 const About = () => {
