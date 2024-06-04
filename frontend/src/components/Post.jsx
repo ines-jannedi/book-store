@@ -31,7 +31,7 @@ const navigate=useNavigate()
             <input type="text" placeholder="description" onChange={(e)=>setdescription(e.target.value)} defaultValue={description}/>
             <input type="text" placeholder="price" onChange={(e)=>setprice(e.target.value)}  defaultValue={price}/>
 
-<button  className="formbutton" onClick={handlePost}>➕</button>
+<button  className="formbutton" onClick={()=>handlePost()}>➕</button>
         </div>
     )
 
